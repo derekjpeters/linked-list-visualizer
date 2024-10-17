@@ -1,14 +1,142 @@
+/* General Layout */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Roboto', sans-serif; /* Modern font for cleaner look */
+  background-color: #f7f9fc; /* Soft background color */
+  color: #333; /* Dark gray for better readability */
+}
+
+.App {
+  text-align: center;
+  padding: 20px;
+}
+
+h1, h2, h3, h4 {
+  color: #2a9d8f; /* Cool teal for headers */
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+/* Buttons */
+button {
+  background-color: #264653; /* Deep dark teal background for buttons */
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  font-size: 1rem;
+  margin: 10px;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+button:hover {
+  background-color: #2a9d8f; /* Lighter teal for hover effect */
+  transform: translateY(-2px); /* Subtle lift on hover */
+}
+
+button:active {
+  background-color: #264653;
+  transform: translateY(1px); /* Press effect */
+}
+
+/* Linked List Styles */
 .linked-list {
   display: flex;
+  justify-content: center;
   align-items: center;
   margin-top: 20px;
+  flex-wrap: wrap; /* To wrap nodes if needed */
 }
 
 .node {
   padding: 10px;
-  border: 1px solid black;
+  border: 2px solid #264653; /* Dark border */
   margin-right: 5px;
-  background-color: #f0f0f0;
-  border-radius: 4px;
+  background-color: #e9c46a; /* Soft yellow background */
+  border-radius: 8px;
   text-align: center;
+  font-weight: 500;
+  min-width: 50px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.node:hover {
+  transform: scale(1.05); /* Slight zoom effect */
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); /* Drop shadow on hover */
+}
+
+.node:last-child {
+  margin-right: 0;
+}
+
+/* Traverse Result Styles */
+h3 {
+  margin-top: 20px;
+}
+
+.result {
+  display: inline-block;
+  padding: 10px;
+  background-color: #e76f51; /* Softer red for result display */
+  border-radius: 5px;
+  color: white;
+  font-weight: 500;
+}
+
+/* Hash Map Practice Styles */
+.hash-map-practice {
+  margin-top: 30px;
+}
+
+.two-sum, .group-anagrams {
+  margin-bottom: 40px;
+  background-color: white;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1); /* Subtle card shadow */
+  transition: transform 0.2s ease;
+}
+
+.two-sum:hover, .group-anagrams:hover {
+  transform: translateY(-5px); /* Lift effect on hover */
+}
+
+.group-anagrams ul {
+  list-style: none;
+  padding: 0;
+}
+
+.group-anagrams li {
+  margin: 5px 0;
+  background-color: #f4a261; /* Soft orange background for anagram groups */
+  padding: 8px;
+  border-radius: 5px;
+  color: white;
+  font-weight: 500;
+}
+
+/* General styling for links (if any) */
+a {
+  color: #2a9d8f;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+a:hover {
+  color: #264653;
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 768px) {
+  .node {
+      margin: 10px 5px;
+      min-width: 40px;
+  }
+  
+  .linked-list {
+      flex-direction: column;
+      align-items: flex-start;
+  }
 }
